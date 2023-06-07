@@ -1,5 +1,6 @@
 .app{
   padding: 10px;
+  max-width: 100%;
 
 }
 .input{
@@ -67,4 +68,11 @@
 }
 .container-card:hover .btn-delelt{
   display: block;
+}
+@media screen and (max-width:600){
+  .input{
+    width: 100%;
+    flex-direction: column;
+  }
+  
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./Card";
+import { clear } from "@testing-library/user-event/dist/clear";
 
 function App() {
   const [name, setName] = useState("");
@@ -29,10 +30,18 @@ function App() {
   const printPage=()=>{
     window.print()
   }
+  const clearPage=()=>{
+    localStorage.removeItem("list")
+    setCardes([]);
+
+  }
   return (
     <div className="app">
       <button onClick={()=>printPage()}>
         print
+      </button>
+      <button onClick={()=>clearPage()}>
+        clear
       </button>
       <form className="input" onSubmit={() => handilSubmit()}>
         <div>
