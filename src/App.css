@@ -69,9 +69,9 @@
 .container-card:hover .btn-delelt{
   display: block;
 }
-@media screen and (max-width:600){
+@media screen and (max-width:600px){
   .input{
-    width: 100%;
+   max-width: 100%;
     flex-direction: column;
   }
   
